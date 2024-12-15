@@ -3,6 +3,7 @@ import { Doc } from "../../../convex/_generated/dataModel";
 import { Loader2Icon } from "lucide-react";
 import { Table , TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { DocumentRow } from "./document-row";
+import { Button } from "@/components/ui/button";
 
 
 interface DocumentTableProps {
@@ -48,5 +49,10 @@ export const DocumentTable = ({
             )}
         </Table>
     )}
+    <div className="flex justify-center items-center">
+        <Button onClick={() => loadMore(5)} disabled={status  !== "CanLoadMore"} variant="ghost" size="sm">
+            {status === "CanLoadMore" ? "Load More" :"End of results"}
+        </Button>
+    </div>
   </div>;
 };
