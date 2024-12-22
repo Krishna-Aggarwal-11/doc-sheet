@@ -14,9 +14,7 @@ export const Ruler = () => {
 
   const setRightMargin = useMutation(({ storage }, position: number) => {
     storage.set("rightMargin", position);
-  }, []);  
-
-  
+  }, []);
 
   const [isDraggingLeft, setIsDraggingLeft] = useState(false);
   const [isDraggingRight, setIsDraggingRight] = useState(false);
